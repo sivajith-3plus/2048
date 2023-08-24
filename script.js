@@ -91,6 +91,9 @@ document.addEventListener('keyup', (e) => {
     if (isGameOver()) {
         document.getElementById("board").innerHTML = `<div class="gameover" id="gameover">game over<button class="newgame" onclick="restart()">Try again </button></div>`
         console.log("Game Over");
+        if (e.code == 'Enter') {
+            restart();
+        }
     } else {
         setTwo();
     }
